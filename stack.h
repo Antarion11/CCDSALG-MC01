@@ -1,5 +1,5 @@
 #ifndef STACK_H
-#define STACK_h
+#define STACK_H
 
 #include <stdbool.h>
 
