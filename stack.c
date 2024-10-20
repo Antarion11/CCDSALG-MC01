@@ -3,9 +3,10 @@
 #include "stack.h"
 
 // CREATE
-void CREATE(Stack* S) {
-    S->top = NULL;  // Stack is empty, so top is set to NULL
-    S->size = 0;    // Stack size is initially 0
+void CREATE(Stack* S, int capacity) {
+ S->top = NULL;    // Stack is empty, so top is set to NULL
+    S->size = 0;      // Stack size is initially 0
+    S->capacity = capacity;  // Initialize the stack's capacity
 }
 
 
