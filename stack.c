@@ -18,13 +18,13 @@ PUSH(Stack* S, Point elem){
 // ISEMPTY
 bool 
 ISEMPTY(Stack * S){
-	
+	return S->top == NULL; //stack is empty if the top pointer is NULL
 }
 
 // ISFULL
 bool 
 ISFULL(Stack * S){
-	
+	return S->size == S->capacity; //stack is full if size equals capacity
 }
 
 // POP
