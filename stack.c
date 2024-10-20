@@ -78,6 +78,11 @@ TOP(Stack *S){
 // NEXT_TO_TOP
 Point
 NEXT_TO_TOP(Stack *S){
-	
+	    if (S->size < 2) {
+        printf("Error: Less than two elements in stack.\n");
+        Point empty = {-1, -1};  // Return a default/sentinel value
+        return empty;
+    }
+    return S->top->next->data;
 }
 
