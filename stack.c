@@ -3,17 +3,31 @@
 #include "stack.h"
 
 // CREATE
-void
-CREATE(Stack* S){
-
+void CREATE(Stack* S) {
+    S->top = NULL;  // Stack is empty, so top is set to NULL
+    S->size = 0;    // Stack size is initially 0
 }
 
 
-//PUSH
-void
-PUSH(Stack* S, Point elem){
-	
+
+// PUSH
+void PUSH(Stack* S, Point elem) {
+    // Allocate memory for a new node
+    Node* newNode = (Node*) malloc(sizeof(Node));
+    
+    // Assign the point to the new node
+    newNode->data = elem;
+    
+    // The new node's next will point to the current top
+    newNode->next = S->top;
+    
+    // Update the top pointer to the new node
+    S->top = newNode;
+    
+    // Increment the size of the stack
+    S->size++;
 }
+
 
 // ISEMPTY
 bool 
