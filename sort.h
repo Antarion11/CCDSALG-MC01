@@ -16,7 +16,8 @@ int compPolar(Point anchor, Point p1, Point p2);
 // selection sort function that sorts points based on polar angle relative to the anchor
 void selectionSort(Point points[], int n, Point anchor);
 
-// insert quick sort functions
+// quick sort functions
+void quickSort(Point points[], int low, int high, Point anchor);
 
 
 #endif 
