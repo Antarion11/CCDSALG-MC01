@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <stdbool.h>
 #include "stack3.h"
 #include "sort.h"
-#include "point.h"
 #include "graham_scan.h"
 
 int main() {
@@ -38,8 +38,16 @@ int main() {
     }
     fclose(input);
 
+    // Measure elapsed time for Graham's Scan with Quick Sort
+    clock_t start, end;
+    start = clock();  // Start timing
+
     // Run Graham's Scan using Quick Sort
     Stack hull = grahamScanQuick(points, n);
+
+    end = clock();  // End timing
+    double time_taken = ((double)(end - start)) * 1000.0 / CLOCKS_PER_SEC; // Convert to milliseconds
+    printf("Elapsed time (Quick Sort): %.2f ms\n", time_taken);
 
     // Open the output file
     FILE *output = fopen(outputFile, "w");
