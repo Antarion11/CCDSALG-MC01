@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // Graham's Scan using Selection Sort
-void grahamScanSelection(Point points[], int n) {
+Stack grahamScanSelection(Point points[], int n) {
     Stack stack;
     CREATE(&stack);                      // Initialize the stack
     Point anchor = findAnchor(points, n); // Find the anchor point
@@ -33,7 +33,7 @@ void grahamScanSelection(Point points[], int n) {
 }
 
 // Graham's Scan using Quick Sort
-void grahamScanQuick(Point points[], int n) {
+Stack grahamScanQuick(Point points[], int n) {
     Stack stack;
     CREATE(&stack);                      // Initialize the stack
     Point anchor = findAnchor(points, n); // Find the anchor point
