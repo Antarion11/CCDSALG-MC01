@@ -5,7 +5,7 @@
 #include "sort.h"
 
 // Function prototypes
-void grahamScanSelection(Point points[], int n);
-void grahamScanQuick(Point points[], int n);
+Stack grahamScanSelection(Point points[], int n);
+Stack grahamScanQuick(Point points[], int n);
 
 #endif
